@@ -13,6 +13,8 @@
 		CE790B2A21BAE426002FCB6F /* ios_push_notifications.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE790B2821BAE426002FCB6F /* ios_push_notifications.xcdatamodeld */; };
 		CE790B2C21BAE42D002FCB6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE790B2B21BAE42D002FCB6F /* Assets.xcassets */; };
 		CE790B2F21BAE42D002FCB6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE790B2D21BAE42D002FCB6F /* LaunchScreen.storyboard */; };
+		CE790B3C21BAEF89002FCB6F /* UIViewController.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE790B3B21BAEF89002FCB6F /* UIViewController.extension.swift */; };
+		CE790B4021BAF72B002FCB6F /* AppDelegate.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE790B3F21BAF72B002FCB6F /* AppDelegate.extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		CE790B2B21BAE42D002FCB6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE790B2E21BAE42D002FCB6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE790B3021BAE42D002FCB6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE790B3621BAE54E002FCB6F /* ios-push-notifications.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ios-push-notifications.entitlements"; sourceTree = "<group>"; };
+		CE790B3B21BAEF89002FCB6F /* UIViewController.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.extension.swift; sourceTree = "<group>"; };
+		CE790B3F21BAF72B002FCB6F /* AppDelegate.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 		CE790B2021BAE426002FCB6F /* ios-push-notifications */ = {
 			isa = PBXGroup;
 			children = (
+				CE790B3621BAE54E002FCB6F /* ios-push-notifications.entitlements */,
 				CE790B2121BAE426002FCB6F /* AppDelegate.swift */,
 				CE790B2321BAE426002FCB6F /* ViewController.swift */,
 				CE790B2521BAE426002FCB6F /* Main.storyboard */,
@@ -63,6 +69,8 @@
 				CE790B2D21BAE42D002FCB6F /* LaunchScreen.storyboard */,
 				CE790B3021BAE42D002FCB6F /* Info.plist */,
 				CE790B2821BAE426002FCB6F /* ios_push_notifications.xcdatamodeld */,
+				CE790B3B21BAEF89002FCB6F /* UIViewController.extension.swift */,
+				CE790B3F21BAF72B002FCB6F /* AppDelegate.extension.swift */,
 			);
 			path = "ios-push-notifications";
 			sourceTree = "<group>";
@@ -99,6 +107,11 @@
 				TargetAttributes = {
 					CE790B1D21BAE426002FCB6F = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -140,6 +153,8 @@
 			files = (
 				CE790B2421BAE426002FCB6F /* ViewController.swift in Sources */,
 				CE790B2221BAE426002FCB6F /* AppDelegate.swift in Sources */,
+				CE790B3C21BAEF89002FCB6F /* UIViewController.extension.swift in Sources */,
+				CE790B4021BAF72B002FCB6F /* AppDelegate.extension.swift in Sources */,
 				CE790B2A21BAE426002FCB6F /* ios_push_notifications.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +301,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ios-push-notifications/ios-push-notifications.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8SUQQ8935B;
 				INFOPLIST_FILE = "ios-push-notifications/Info.plist";
@@ -293,7 +309,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "franciscoigor.ios-push-notifications";
+				PRODUCT_BUNDLE_IDENTIFIER = me.developer.ios.notifications;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -304,6 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ios-push-notifications/ios-push-notifications.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8SUQQ8935B;
 				INFOPLIST_FILE = "ios-push-notifications/Info.plist";
@@ -311,7 +328,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "franciscoigor.ios-push-notifications";
+				PRODUCT_BUNDLE_IDENTIFIER = me.developer.ios.notifications;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -17,6 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Check remote notification
+        let notificationOption = launchOptions?[.remoteNotification]
+        if let notification = notificationOption as? [String: AnyObject],
+            let aps = notification["aps"] as? [String: AnyObject] {
+            // Process remote notification in the view
+            let main = window?.rootViewController as! ViewController
+            main.initialNotification = aps
+        }
+        
         return true
     }
 
