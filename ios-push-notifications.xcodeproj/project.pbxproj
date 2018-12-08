@@ -15,6 +15,7 @@
 		CE790B2F21BAE42D002FCB6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE790B2D21BAE42D002FCB6F /* LaunchScreen.storyboard */; };
 		CE790B3C21BAEF89002FCB6F /* UIViewController.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE790B3B21BAEF89002FCB6F /* UIViewController.extension.swift */; };
 		CE790B4021BAF72B002FCB6F /* AppDelegate.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE790B3F21BAF72B002FCB6F /* AppDelegate.extension.swift */; };
+		CE790B4421BB4A36002FCB6F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CE790B4321BB4A36002FCB6F /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		CE790B3621BAE54E002FCB6F /* ios-push-notifications.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ios-push-notifications.entitlements"; sourceTree = "<group>"; };
 		CE790B3B21BAEF89002FCB6F /* UIViewController.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.extension.swift; sourceTree = "<group>"; };
 		CE790B3F21BAF72B002FCB6F /* AppDelegate.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.extension.swift; sourceTree = "<group>"; };
+		CE790B4321BB4A36002FCB6F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 		CE790B1521BAE426002FCB6F = {
 			isa = PBXGroup;
 			children = (
+				CE790B4321BB4A36002FCB6F /* README.md */,
 				CE790B2021BAE426002FCB6F /* ios-push-notifications */,
 				CE790B1F21BAE426002FCB6F /* Products */,
 			);
@@ -140,6 +143,7 @@
 			files = (
 				CE790B2F21BAE42D002FCB6F /* LaunchScreen.storyboard in Resources */,
 				CE790B2C21BAE42D002FCB6F /* Assets.xcassets in Resources */,
+				CE790B4421BB4A36002FCB6F /* README.md in Resources */,
 				CE790B2721BAE426002FCB6F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
