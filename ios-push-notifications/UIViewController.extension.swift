@@ -50,8 +50,9 @@ extension UIViewController {
     
     func clearNotification(){
         UIApplication.shared.applicationIconBadgeNumber = 0
-        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+        let notifications =  UNUserNotificationCenter.current()
+        notifications.removeAllPendingNotificationRequests()
+        notitications.removeAllDeliveredNotifications()
         
     }
     
