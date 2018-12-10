@@ -33,4 +33,26 @@ extension UIViewController {
         }
     }
     
+    func userNotification(message: String, title: String, count: Int){
+        //creating the notification content
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.subtitle = ""
+        content.body = message
+        content.badge = count as NSNumber
+        //getting the notification trigger
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        //getting the notification request
+        let request = UNNotificationRequest(identifier: "SimplifiedIOSNotification", content: content, trigger: trigger)
+        //adding the notification to notification center
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
+    
+    func clearNotification(){
+        UIApplication.shared.applicationIconBadgeNumber = 0
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+        
+    }
+    
 }
